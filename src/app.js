@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const rutas = require('./src/routes/rutas.js')
+const rutas = require('./routes/rutas.js')
 app.use(express.static('public'));
 
 app.use('/',rutas);
