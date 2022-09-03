@@ -3,15 +3,15 @@ const path = require('path');
 let controladores = {
     
     index: function(req,res) {
-        res.sendFile(path.join(__dirname,'../views/index.html'));
+        res.render(path.join(__dirname,'../views/index.ejs'));
     },
     
     login:  function(req,res) {
-        res.sendFile(path.join(__dirname,'../views/login.html'));
+        res.render(path.join(__dirname,'../views/login.ejs'));
     },
     
     register:  function(req,res) {
-        res.sendFile(path.join(__dirname,'../views/register.html'));
+        res.render(path.join(__dirname,'../views/register.ejs'));
     },
 };
  
