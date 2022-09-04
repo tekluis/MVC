@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.error_img {
+    width: 50%;
+    max-width: 400px;
+    min-width: 100px;
+}
+
+.padre_error_img {
+    display: flex;
+    justify-content: center;
+}
 
 body{
     font-family: 'Roboto', sans-serif;
