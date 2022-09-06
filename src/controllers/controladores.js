@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path');                                           // habilita path
 
 let controladores = {
     
@@ -27,4 +27,4 @@ let controladores = {
     },
 };
  
-module.exports = controladores
+module.exports = controladores                                          // exporta controladores

@@ -1,6 +1,6 @@
-const express = require('express')
-const router = express.Router();
-const controladores = require('../controllers/controladores')
+const express = require('express')                                  // instala express
+const router = express.Router();                                    // habilita ruteo
+const controladores = require('../controllers/controladores')       // importa controladores
 
 router.get('/', controladores.index);
 router.get('/login', controladores.login);

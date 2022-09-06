@@ -1,21 +1,22 @@
-const express = require('express');
-const app = express();
-const rutas = require('./routes/rutas.js')
-app.use(express.static('public'));
-app.set('view engine', 'ejs');
+const express = require('express');                 // carga biblioteca express
+const app = express();                              // inicializa express
+const rutas = require('./routes/rutas.js');         // inicializa ruteo
+app.use(express.static('public'));                  // declara carpeta publica
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.set('view engine', 'ejs');                      //inicializa ejs
+app.use(express.urlencoded({ extended: false }));   //permite capturar datos enviados por el formulario en body
+app.use(express.json());                            //permite capturar datos enviados por el formulario en body
 
-app.use('/',rutas);
+app.use('/',rutas);                                 // define ruteo
 
 app.use((req,res,next) => {
-    res.status(404).render((__dirname + '/views/no_encontrado.ejs'));
+    res.status(404).render((__dirname + '/views/no_encontrado.ejs'));       // captura error 404
 })
 
 var puerto=3000;
 app.listen(process.env.PORT || puerto, ()=>{
-    console.log('Servidor funcionando en puerto '+puerto);
+    console.log('Servidor funcionando en puerto '+puerto);                  // inicia servidor en puerto
 });
+
 
 
