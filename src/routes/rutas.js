@@ -2,12 +2,12 @@ const express = require('express')                                  // instala e
 const router = express.Router();                                    // habilita ruteo
 const controladores = require('../controllers/controladores')       // importa controladores
 
-router.get('/', controladores.index);
-router.get('/login', controladores.login);
+router.get('/', controladores.index);                               // usa controlador.index al entrar a home
+router.get('/login', controladores.login);                          // usa controlador.login al entrar a /login
 router.get('/register', controladores.register);
 
 router.post('/login', controladores.entrar);
 router.post('/register', controladores.crear);
 
 
-module.exports = router;
+module.exports = router;                                            // exporta ruteador

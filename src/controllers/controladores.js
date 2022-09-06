@@ -3,11 +3,11 @@ const path = require('path');                                           // habil
 let controladores = {
     
     index: function(req,res) {
-        res.render(path.join(__dirname,'../views/index.ejs'));
+        res.render(path.join(__dirname,'../views/index.ejs'));          // devuelve la página index.ejs al llamar a controlador.index
     },
     
     login:  function(req,res) {
-        res.render(path.join(__dirname,'../views/login.ejs'));
+        res.render(path.join(__dirname,'../views/login.ejs'));          // devuelve la página login.ejs al llamar a controlador.login
     },
     
     register:  function(req,res) {
@@ -15,9 +15,9 @@ let controladores = {
     },
 
     crear: function(req,res) {
-        let datos_crear=req.body;
-        //res.send(datos_crear);
-        res.redirect('/');
+        let datos_crear=req.body;                                       // carga los datos del formulario en datos_crear desde req.body
+        //res.send(datos_crear);                                        // muestra los datos del formulario en el navegador
+        res.redirect('/');                                              // envía a la página de home luego de cargar los datos del formulario
     },
 
     entrar: function(req,res) {

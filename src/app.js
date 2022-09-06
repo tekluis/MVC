@@ -4,8 +4,8 @@ const rutas = require('./routes/rutas.js');         // inicializa ruteo
 app.use(express.static('public'));                  // declara carpeta publica
 
 app.set('view engine', 'ejs');                      //inicializa ejs
-app.use(express.urlencoded({ extended: false }));   //permite capturar datos enviados por el formulario en body
-app.use(express.json());                            //permite capturar datos enviados por el formulario en body
+app.use(express.urlencoded({ extended: false }));   //permite capturar datos enviados por el formulario con req.body
+app.use(express.json());                            //permite capturar datos enviados por el formulario en req.body
 
 app.use('/',rutas);                                 // define ruteo
 
